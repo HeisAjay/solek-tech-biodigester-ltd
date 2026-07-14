@@ -19,7 +19,7 @@ export function SiteFooter() {
               minimal maintenance, and real environmental responsibility.
             </p>
             <a
-              href="https://wa.me/000000000"
+              href="https://wa.me/2347066602480"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-brand px-5 py-2.5 text-sm font-semibold text-[#0b1220] hover:opacity-90 transition"
             >
               <MessageCircle className="h-4 w-4" />
@@ -44,7 +44,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3 text-sm">
               <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 shrink-0 text-emerald-brand" /><span>Plot 12, Environmental Way<br />Lagos, Nigeria</span></li>
               <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 shrink-0 text-emerald-brand" /><a href="mailto:info@solektech.com" className="hover:text-white">info@solektech.com</a></li>
-              <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-emerald-brand" /><a href="tel:+000000000" className="hover:text-white">+000 000 000</a></li>
+              <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-emerald-brand" /><a href="tel:+2347066602480" className="hover:text-white">+234 7066602480</a></li>
             </ul>
             <div className="mt-6 flex items-center gap-3">
               {[Facebook, Instagram, Linkedin, Twitter].map((Icon, i) => (
