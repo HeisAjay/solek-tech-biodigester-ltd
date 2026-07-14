@@ -1,24 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/Hero";
+import { TrustBar } from "@/components/TrustBar";
+import { AboutPreview } from "@/components/AboutPreview";
+import { Services } from "@/components/Services";
+import { Industries } from "@/components/Industries";
+import { WhyChoose } from "@/components/WhyChoose";
+import { Timeline } from "@/components/Timeline";
+import { Stats } from "@/components/Stats";
+import { Projects } from "@/components/Projects";
+import { Testimonials } from "@/components/Testimonials";
+import { FaqSection } from "@/components/FaqSection";
+import { CtaBand } from "@/components/CtaBand";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <TrustBar />
+      <AboutPreview />
+      <Services />
+      <Industries />
+      <WhyChoose />
+      <Timeline />
+      <Stats />
+      <Projects />
+      <Testimonials />
+      <FaqSection />
+      <CtaBand />
+    </>
   );
 }
