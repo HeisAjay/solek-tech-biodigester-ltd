@@ -2,7 +2,7 @@ import { SectionHeader } from "./SectionHeader";
 import { useReveal } from "@/hooks/use-reveal";
 import {
   Home,
-  Buildings,
+  Building2,
   Hotel,
   School,
   Stethoscope,
@@ -11,12 +11,9 @@ import {
   Landmark,
 } from "lucide-react";
 
-// Buildings icon fallback
-const B = Buildings as unknown as typeof Home;
-
 const items = [
   { icon: Home, label: "Homes" },
-  { icon: B, label: "Estates" },
+  { icon: Building2, label: "Estates" },
   { icon: Hotel, label: "Hotels & Resorts" },
   { icon: School, label: "Schools" },
   { icon: Stethoscope, label: "Hospitals" },
