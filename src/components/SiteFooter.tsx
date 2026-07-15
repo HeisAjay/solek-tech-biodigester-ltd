@@ -42,7 +42,7 @@ export function SiteFooter() {
           <div>
             <h4 className="text-white font-semibold text-sm tracking-wide uppercase">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm">
-              <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 shrink-0 text-emerald-brand" /><span>Plot 12, Environmental Way<br />Lagos, Nigeria</span></li>
+              <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 shrink-0 text-emerald-brand" /><span>No 52, Community Road, Ago Palace Way, Okota, Isolo<br />Lagos, Nigeria</span></li>
               <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 shrink-0 text-emerald-brand" /><a href="mailto:Olaifasolomonadeleke2@gmail.com" className="hover:text-white">Olaifasolomonadeleke2@gmail.com</a></li>
               <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-emerald-brand" /><a href="tel:+2347066602480" className="hover:text-white">+234 7066602480</a></li>
             </ul>
