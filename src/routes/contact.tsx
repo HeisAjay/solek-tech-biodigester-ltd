@@ -49,7 +49,7 @@ function ContactPage() {
                 <div>
                   <div className="font-semibold text-foreground">Head Office</div>
                   <div className="text-sm text-muted-foreground">
-                    Plot 12, Environmental Way
+                    No 52, Community Road, Ago Palace Way, Okota, Isolo
                     <br />
                     Lagos, Nigeria
                   </div>
@@ -62,10 +62,10 @@ function ContactPage() {
                 <div>
                   <div className="font-semibold text-foreground">Email</div>
                   <a
-                    href="mailto:info@solektech.com"
-                    className="text-sm text-primary hover:underline"
+                    href="mailto:Olaifasolomonadeleke2@gmail.com"
+                    className="text-sm text-primary hover:underline break-all"
                   >
-                    info@solektech.com
+                    Olaifasolomonadeleke2@gmail.com
                   </a>
                 </div>
               </li>
@@ -75,8 +75,8 @@ function ContactPage() {
                 </span>
                 <div>
                   <div className="font-semibold text-foreground">Phone</div>
-                  <a href="tel:+000000000" className="text-sm text-primary hover:underline">
-                    +000 000 000
+                  <a href="tel:+2347066602480" className="text-sm text-primary hover:underline">
+                    +234 7066602480
                   </a>
                 </div>
               </li>
@@ -87,7 +87,7 @@ function ContactPage() {
                 <div>
                   <div className="font-semibold text-foreground">WhatsApp</div>
                   <a
-                    href="https://wa.me/000000000"
+                    href="https://wa.me/2347066602480"
                     className="text-sm text-primary hover:underline"
                   >
                     Message our team
@@ -118,7 +118,7 @@ function ContactPage() {
                 placeholder="jane@company.com"
                 required
               />
-              <Field label="Phone" name="phone" placeholder="+000 000 000" />
+              <Field label="Phone" name="phone" placeholder="+234 7066602480" />
               <Field label="Property type" name="type" placeholder="Home, estate, hotel, school…" />
             </div>
             <div className="mt-4">
