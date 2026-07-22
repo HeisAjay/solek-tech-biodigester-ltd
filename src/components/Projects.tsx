@@ -11,25 +11,29 @@ const projects = [
     img: estateImg,
     tag: "Residential Estate",
     title: "Palmview Heights — 84 homes",
-    excerpt: "A fully underground biodigester network serving an 84-home luxury estate with zero surface footprint.",
+    excerpt:
+      "A fully underground biodigester network serving an 84-home luxury estate with zero surface footprint.",
   },
   {
     img: industrialImg,
     tag: "Industrial",
     title: "Northline Processing Plant",
-    excerpt: "High-capacity anaerobic treatment cutting effluent COD by 92% and reclaiming biogas for on-site heat.",
+    excerpt:
+      "High-capacity anaerobic treatment cutting effluent COD by 92% and reclaiming biogas for on-site heat.",
   },
   {
     img: schoolImg,
     tag: "Institutional",
     title: "Greenfield Academy Campus",
-    excerpt: "A silent, odor-free system serving 2,400 students and staff — with dashboard-based monitoring.",
+    excerpt:
+      "A silent, odor-free system serving 2,400 students and staff — with dashboard-based monitoring.",
   },
   {
     img: hotelImg,
     tag: "Hospitality",
     title: "Bayline Resort & Spa",
-    excerpt: "Discreet treatment integrated into landscaped grounds — preserving guest experience end-to-end.",
+    excerpt:
+      "Discreet treatment integrated into landscaped grounds — preserving guest experience end-to-end.",
   },
 ];
 
@@ -53,7 +57,19 @@ export function Projects() {
   );
 }
 
-function ProjectCard({ img, tag, title, excerpt, index }: { img: string; tag: string; title: string; excerpt: string; index: number }) {
+function ProjectCard({
+  img,
+  tag,
+  title,
+  excerpt,
+  index,
+}: {
+  img: string;
+  tag: string;
+  title: string;
+  excerpt: string;
+  index: number;
+}) {
   const ref = useReveal<HTMLAnchorElement>();
   return (
     <a

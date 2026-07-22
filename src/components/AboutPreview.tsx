@@ -16,11 +16,18 @@ export function AboutPreview() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 grid gap-12 lg:grid-cols-2 lg:items-center">
         <div ref={ref} className="reveal relative">
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
-            <img src={aboutImg} alt="SolekTech engineers reviewing wastewater plans on site" loading="lazy" className="h-full w-full object-cover" />
+            <img
+              src={aboutImg}
+              alt="SolekTech engineers reviewing wastewater plans on site"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div className="hidden md:block absolute -bottom-6 -right-6 rounded-2xl glass px-6 py-5 shadow-elegant">
             <div className="font-display text-3xl font-semibold text-foreground">12+ yrs</div>
-            <div className="text-xs text-muted-foreground mt-1">Engineering biodigester systems</div>
+            <div className="text-xs text-muted-foreground mt-1">
+              Engineering biodigester systems
+            </div>
           </div>
         </div>
 
@@ -34,8 +41,8 @@ export function AboutPreview() {
           </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
             SolekTech was founded to solve one problem well: wastewater that is safe, sustainable,
-            and doesn't demand attention. We design, build, and maintain biodigester systems used
-            by families, estates, hospitality operators, schools, hospitals, and industry.
+            and doesn't demand attention. We design, build, and maintain biodigester systems used by
+            families, estates, hospitality operators, schools, hospitals, and industry.
           </p>
           <ul className="mt-8 space-y-3">
             {points.map((p) => (

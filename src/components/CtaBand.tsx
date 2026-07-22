@@ -5,7 +5,13 @@ import waterImg from "@/assets/water.jpg";
 export function CtaBand() {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
-      <img src={waterImg} alt="" aria-hidden loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+      <img
+        src={waterImg}
+        alt=""
+        aria-hidden
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0F766E]/95 via-[#0F766E]/85 to-[#2563EB]/85" />
       <div className="relative mx-auto max-w-5xl px-6 lg:px-10 text-center text-white">
         <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">

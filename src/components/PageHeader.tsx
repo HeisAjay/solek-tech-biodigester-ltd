@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
 
-export function PageHeader({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) {
+export function PageHeader({
+  eyebrow,
+  title,
+  description,
+}: {
+  eyebrow: string;
+  title: string;
+  description?: string;
+}) {
   return (
     <section className="relative isolate overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
       <div className="absolute inset-0 gradient-hero" />

@@ -33,7 +33,17 @@ export function Timeline() {
   );
 }
 
-function Step({ icon: Icon, title, desc, step }: { icon: typeof Search; title: string; desc: string; step: number }) {
+function Step({
+  icon: Icon,
+  title,
+  desc,
+  step,
+}: {
+  icon: typeof Search;
+  title: string;
+  desc: string;
+  step: number;
+}) {
   const ref = useReveal<HTMLLIElement>();
   return (
     <li ref={ref} style={{ transitionDelay: `${step * 80}ms` }} className="reveal relative">

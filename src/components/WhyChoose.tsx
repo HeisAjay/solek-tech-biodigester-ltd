@@ -3,12 +3,36 @@ import { useReveal } from "@/hooks/use-reveal";
 import { ShieldCheck, Leaf, Cpu, Award, Clock, Users } from "lucide-react";
 
 const points = [
-  { icon: Award, title: "12+ years of field-proven engineering", desc: "Installations across residential, hospitality, and industrial sites — running quietly for over a decade." },
-  { icon: Leaf, title: "Genuinely sustainable design", desc: "Anaerobic digestion converts waste into clean effluent and biogas — with no chemicals and no smell." },
-  { icon: Cpu, title: "Modern monitoring & control", desc: "Optional sensors and remote diagnostics keep your system optimized without site visits." },
-  { icon: ShieldCheck, title: "Regulator-ready compliance", desc: "Systems designed and documented to meet local environmental and public-health standards." },
-  { icon: Clock, title: "Fast, disciplined installation", desc: "Structured project delivery — from survey to commissioning — with defined milestones and hand-off." },
-  { icon: Users, title: "Dedicated maintenance partnership", desc: "Ongoing service contracts, priority response, and a technical team that knows your site." },
+  {
+    icon: Award,
+    title: "12+ years of field-proven engineering",
+    desc: "Installations across residential, hospitality, and industrial sites — running quietly for over a decade.",
+  },
+  {
+    icon: Leaf,
+    title: "Genuinely sustainable design",
+    desc: "Anaerobic digestion converts waste into clean effluent and biogas — with no chemicals and no smell.",
+  },
+  {
+    icon: Cpu,
+    title: "Modern monitoring & control",
+    desc: "Optional sensors and remote diagnostics keep your system optimized without site visits.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Regulator-ready compliance",
+    desc: "Systems designed and documented to meet local environmental and public-health standards.",
+  },
+  {
+    icon: Clock,
+    title: "Fast, disciplined installation",
+    desc: "Structured project delivery — from survey to commissioning — with defined milestones and hand-off.",
+  },
+  {
+    icon: Users,
+    title: "Dedicated maintenance partnership",
+    desc: "Ongoing service contracts, priority response, and a technical team that knows your site.",
+  },
 ];
 
 export function WhyChoose() {
@@ -22,7 +46,22 @@ export function WhyChoose() {
         />
         <div className="mt-14 grid gap-4 md:grid-cols-6 md:auto-rows-[minmax(0,1fr)]">
           {points.map((p, i) => (
-            <Card key={p.title} {...p} span={i === 0 ? "md:col-span-3" : i === 1 ? "md:col-span-3" : i === 4 ? "md:col-span-3" : i === 5 ? "md:col-span-3" : "md:col-span-2"} index={i} />
+            <Card
+              key={p.title}
+              {...p}
+              span={
+                i === 0
+                  ? "md:col-span-3"
+                  : i === 1
+                    ? "md:col-span-3"
+                    : i === 4
+                      ? "md:col-span-3"
+                      : i === 5
+                        ? "md:col-span-3"
+                        : "md:col-span-2"
+              }
+              index={i}
+            />
           ))}
         </div>
       </div>
@@ -30,7 +69,19 @@ export function WhyChoose() {
   );
 }
 
-function Card({ icon: Icon, title, desc, span, index }: { icon: typeof Leaf; title: string; desc: string; span: string; index: number }) {
+function Card({
+  icon: Icon,
+  title,
+  desc,
+  span,
+  index,
+}: {
+  icon: typeof Leaf;
+  title: string;
+  desc: string;
+  span: string;
+  index: number;
+}) {
   const ref = useReveal<HTMLDivElement>();
   return (
     <div
@@ -41,7 +92,9 @@ function Card({ icon: Icon, title, desc, span, index }: { icon: typeof Leaf; tit
       <span className="inline-grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary">
         <Icon className="h-5 w-5" />
       </span>
-      <h3 className="mt-5 font-display text-lg md:text-xl font-semibold text-foreground">{title}</h3>
+      <h3 className="mt-5 font-display text-lg md:text-xl font-semibold text-foreground">
+        {title}
+      </h3>
       <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{desc}</p>
     </div>
   );
