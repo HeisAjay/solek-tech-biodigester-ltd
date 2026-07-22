@@ -33,13 +33,15 @@ export function SiteHeader() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2 min-w-0">
+          <Link to="/" className="flex items-center gap-2 min-w-0" aria-label="SO'LEKTECH — Home">
             <img
               src={logoAsset.url}
-              alt="SO'LEKTECH"
+              alt="SO'LEKTECH — Advanced biodigester sewage systems"
               width={160}
               height={48}
-              className="h-9 w-auto shrink-0 rounded-lg object-contain"
+              loading="eager"
+              decoding="async"
+              className="h-8 sm:h-9 md:h-10 w-auto max-w-[160px] shrink-0 rounded-lg object-contain"
             />
           </Link>
 
