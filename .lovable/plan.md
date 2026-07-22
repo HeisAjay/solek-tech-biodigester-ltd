@@ -1,4 +1,3 @@
-
 # SolekTech Premium Website
 
 A multi-route TanStack Start site for SolekTech — biodigester sewage / wastewater solutions — with a world-class engineering-firm aesthetic (Apple / Tesla / Siemens quality bar).
@@ -6,6 +5,7 @@ A multi-route TanStack Start site for SolekTech — biodigester sewage / wastewa
 ## Design System
 
 Set tokens in `src/styles.css` (oklch equivalents of the requested hex):
+
 - Primary Deep Green `#0F766E`, Secondary Ocean Blue `#2563EB`, Accent Emerald `#10B981`
 - Background White `#FFFFFF`, Muted `#F8FAFC`, Text Charcoal `#111827`
 - Gradients: `--gradient-hero` (deep green → ocean blue), `--gradient-emerald`
@@ -53,6 +53,7 @@ Each route has its own `head()` with unique title, description, og:title, og:des
 ## Components
 
 `src/components/`:
+
 - `SiteHeader.tsx` — sticky nav with blur on scroll, mobile sheet
 - `SiteFooter.tsx` — dark premium footer + WhatsApp float
 - `Hero.tsx`, `TrustBar.tsx`, `ServiceCard.tsx`, `IndustryGrid.tsx`, `Stats.tsx` (uses `useInView` + counter), `Timeline.tsx`, `ProjectCard.tsx`, `TestimonialCard.tsx`, `FaqAccordion.tsx`, `CtaBand.tsx`
@@ -63,6 +64,7 @@ Use `framer-motion` for entrance animations and hover micro-interactions. Instal
 ## Imagery
 
 Generate 8–10 premium engineering photos with `imagegen` (standard quality) and save under `src/assets/`:
+
 - Hero: aerial view of modern biodigester installation at a residential estate, golden hour
 - About: engineers reviewing plans on-site
 - Services thumbnails (residential, commercial, hospital, hotel)

@@ -23,29 +23,42 @@ export function Stats() {
   );
 }
 
-function Counter({ value, suffix, label, delay }: { value: number; suffix: string; label: string; delay: number }) {
+function Counter({
+  value,
+  suffix,
+  label,
+  delay,
+}: {
+  value: number;
+  suffix: string;
+  label: string;
+  delay: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [n, setN] = useState(0);
   const started = useRef(false);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting && !started.current) {
-          started.current = true;
-          const start = performance.now();
-          const dur = 1600;
-          const tick = (t: number) => {
-            const p = Math.min(1, (t - start) / dur);
-            const eased = 1 - Math.pow(1 - p, 3);
-            setN(Math.round(eased * value));
-            if (p < 1) requestAnimationFrame(tick);
-          };
-          setTimeout(() => requestAnimationFrame(tick), delay);
-        }
-      });
-    }, { threshold: 0.4 });
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !started.current) {
+            started.current = true;
+            const start = performance.now();
+            const dur = 1600;
+            const tick = (t: number) => {
+              const p = Math.min(1, (t - start) / dur);
+              const eased = 1 - Math.pow(1 - p, 3);
+              setN(Math.round(eased * value));
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            setTimeout(() => requestAnimationFrame(tick), delay);
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
     io.observe(el);
     return () => io.disconnect();
   }, [value, delay]);

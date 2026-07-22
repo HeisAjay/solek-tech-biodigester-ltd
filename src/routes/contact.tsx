@@ -35,7 +35,9 @@ function ContactPage() {
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 lg:px-10 grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <div>
-            <h2 className="font-display text-2xl font-semibold text-foreground">Reach us directly</h2>
+            <h2 className="font-display text-2xl font-semibold text-foreground">
+              Reach us directly
+            </h2>
             <p className="mt-3 text-muted-foreground">
               Prefer to talk first? Our team is available across email, phone, and WhatsApp.
             </p>
@@ -46,7 +48,11 @@ function ContactPage() {
                 </span>
                 <div>
                   <div className="font-semibold text-foreground">Head Office</div>
-                  <div className="text-sm text-muted-foreground">Plot 12, Environmental Way<br />Lagos, Nigeria</div>
+                  <div className="text-sm text-muted-foreground">
+                    Plot 12, Environmental Way
+                    <br />
+                    Lagos, Nigeria
+                  </div>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -55,7 +61,12 @@ function ContactPage() {
                 </span>
                 <div>
                   <div className="font-semibold text-foreground">Email</div>
-                  <a href="mailto:info@solektech.com" className="text-sm text-primary hover:underline">info@solektech.com</a>
+                  <a
+                    href="mailto:info@solektech.com"
+                    className="text-sm text-primary hover:underline"
+                  >
+                    info@solektech.com
+                  </a>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -64,7 +75,9 @@ function ContactPage() {
                 </span>
                 <div>
                   <div className="font-semibold text-foreground">Phone</div>
-                  <a href="tel:+000000000" className="text-sm text-primary hover:underline">+000 000 000</a>
+                  <a href="tel:+000000000" className="text-sm text-primary hover:underline">
+                    +000 000 000
+                  </a>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -73,22 +86,38 @@ function ContactPage() {
                 </span>
                 <div>
                   <div className="font-semibold text-foreground">WhatsApp</div>
-                  <a href="https://wa.me/000000000" className="text-sm text-primary hover:underline">Message our team</a>
+                  <a
+                    href="https://wa.me/000000000"
+                    className="text-sm text-primary hover:underline"
+                  >
+                    Message our team
+                  </a>
                 </div>
               </li>
             </ul>
           </div>
 
           <form
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              setSent(true);
+            }}
             className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-elegant"
           >
-            <h3 className="font-display text-xl font-semibold text-foreground">Request a free site assessment</h3>
+            <h3 className="font-display text-xl font-semibold text-foreground">
+              Request a free site assessment
+            </h3>
             <p className="mt-2 text-sm text-muted-foreground">We reply within one business day.</p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <Field label="Full name" name="name" placeholder="Jane Doe" required />
-              <Field label="Email" name="email" type="email" placeholder="jane@company.com" required />
+              <Field
+                label="Email"
+                name="email"
+                type="email"
+                placeholder="jane@company.com"
+                required
+              />
               <Field label="Phone" name="phone" placeholder="+000 000 000" />
               <Field label="Property type" name="type" placeholder="Home, estate, hotel, school…" />
             </div>
@@ -116,10 +145,25 @@ function ContactPage() {
   );
 }
 
-function Field({ label, name, type = "text", placeholder, required }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
+function Field({
+  label,
+  name,
+  type = "text",
+  placeholder,
+  required,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  placeholder?: string;
+  required?: boolean;
+}) {
   return (
     <div>
-      <label className="text-sm font-medium text-foreground">{label}{required && <span className="text-primary"> *</span>}</label>
+      <label className="text-sm font-medium text-foreground">
+        {label}
+        {required && <span className="text-primary"> *</span>}
+      </label>
       <input
         name={name}
         type={type}

@@ -1,14 +1,6 @@
 import { SectionHeader } from "./SectionHeader";
 import { useReveal } from "@/hooks/use-reveal";
-import {
-  Home,
-  Building2,
-  Factory,
-  Hotel,
-  School,
-  Stethoscope,
-  ArrowUpRight,
-} from "lucide-react";
+import { Home, Building2, Factory, Hotel, School, Stethoscope, ArrowUpRight } from "lucide-react";
 
 const services = [
   {

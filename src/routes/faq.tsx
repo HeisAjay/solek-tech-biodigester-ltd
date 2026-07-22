@@ -15,8 +15,7 @@ export const Route = createFileRoute("/faq")({
       { property: "og:title", content: "SolekTech FAQ" },
       {
         property: "og:description",
-        content:
-          "Everything you need to know about biodigester systems, service, and compliance.",
+        content: "Everything you need to know about biodigester systems, service, and compliance.",
       },
     ],
   }),

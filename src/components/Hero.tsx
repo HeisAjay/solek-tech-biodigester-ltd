@@ -29,8 +29,8 @@ export function Hero() {
           </span>
 
           <h1 className="mt-6 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.02] tracking-tight text-white">
-            Engineering Smarter Wastewater{" "}
-            <span className="text-gradient">Solutions</span> for a Cleaner Future.
+            Engineering Smarter Wastewater <span className="text-gradient">Solutions</span> for a
+            Cleaner Future.
           </h1>
 
           <p className="mt-6 max-w-2xl text-base md:text-lg text-white/80 leading-relaxed">
