@@ -20,10 +20,12 @@ export function SiteFooter() {
             <div className="flex items-center gap-2">
               <img
                 src={logoAsset.url}
-                alt="SO'LEKTECH"
+                alt="SO'LEKTECH — Advanced biodigester sewage systems"
                 width={160}
                 height={48}
-                className="h-10 w-auto rounded-lg object-contain"
+                loading="lazy"
+                decoding="async"
+                className="h-9 sm:h-10 w-auto max-w-[180px] rounded-lg object-contain"
               />
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/60">
