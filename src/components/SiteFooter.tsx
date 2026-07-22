@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Droplets, MapPin, Mail, Phone, MessageCircle, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Mail, Phone, MessageCircle, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import logoAsset from "@/assets/solektech-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
