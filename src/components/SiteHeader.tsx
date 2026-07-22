@@ -34,16 +34,13 @@ export function SiteHeader() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2 min-w-0">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl gradient-emerald text-white shadow-elegant">
-              <Droplets className="h-5 w-5" />
-            </span>
-            <span
-              className={`font-display text-lg font-semibold tracking-tight truncate ${
-                scrolled ? "text-foreground" : "text-white drop-shadow"
-              }`}
-            >
-              SolekTech
-            </span>
+            <img
+              src={logoAsset.url}
+              alt="SO'LEKTECH"
+              width={160}
+              height={48}
+              className="h-9 w-auto shrink-0 rounded-lg object-contain"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

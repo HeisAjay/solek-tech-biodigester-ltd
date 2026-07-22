@@ -9,10 +9,13 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-4">
           <div className="lg:col-span-2 max-w-md">
             <div className="flex items-center gap-2">
-              <span className="grid h-10 w-10 place-items-center rounded-xl gradient-emerald text-white">
-                <Droplets className="h-5 w-5" />
-              </span>
-              <span className="font-display text-xl font-semibold text-white">SolekTech</span>
+              <img
+                src={logoAsset.url}
+                alt="SO'LEKTECH"
+                width={160}
+                height={48}
+                className="h-10 w-auto rounded-lg object-contain"
+              />
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/60">
               Advanced biodigester sewage systems engineered for homes, estates, hotels, schools,
