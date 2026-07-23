@@ -20,6 +20,7 @@ export const Route = createFileRoute("/services")({
           "Purpose-built wastewater treatment for homes, estates, hotels, schools, hospitals, commercial, and industry.",
       },
     ],
+    links: [{ rel: "canonical", href: "/services" }],
   }),
   component: ServicesPage,
 });

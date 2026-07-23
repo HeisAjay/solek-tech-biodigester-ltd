@@ -13,6 +13,9 @@ import { FaqSection } from "@/components/FaqSection";
 import { CtaBand } from "@/components/CtaBand";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    links: [{ rel: "canonical", href: "/" }],
+  }),
   component: Index,
 });
 
