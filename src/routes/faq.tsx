@@ -18,6 +18,7 @@ export const Route = createFileRoute("/faq")({
         content: "Everything you need to know about biodigester systems, service, and compliance.",
       },
     ],
+    links: [{ rel: "canonical", href: "/faq" }],
   }),
   component: FaqPage,
 });

@@ -8,7 +8,7 @@ import { PageHeader } from "@/components/PageHeader";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About SolekTech — Environmental Engineering & Clean Technology" },
+      { title: "About SolekTech — Environmental Engineering" },
       {
         name: "description",
         content:
@@ -21,6 +21,7 @@ export const Route = createFileRoute("/about")({
           "Engineering-led biodigester systems for homes, estates, hospitality, institutions, and industry.",
       },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: AboutPage,
 });

@@ -18,6 +18,7 @@ export const Route = createFileRoute("/contact")({
         content: "Request a free site assessment for your biodigester wastewater system.",
       },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: ContactPage,
 });

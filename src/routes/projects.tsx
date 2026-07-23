@@ -20,6 +20,7 @@ export const Route = createFileRoute("/projects")({
           "Recent biodigester installations — quietly running across estates, resorts, campuses, and factories.",
       },
     ],
+    links: [{ rel: "canonical", href: "/projects" }],
   }),
   component: ProjectsPage,
 });

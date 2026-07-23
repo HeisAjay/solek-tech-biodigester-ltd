@@ -19,6 +19,7 @@ export const Route = createFileRoute("/process")({
           "Consultation, site assessment, system design, installation, and maintenance support.",
       },
     ],
+    links: [{ rel: "canonical", href: "/process" }],
   }),
   component: ProcessPage,
 });

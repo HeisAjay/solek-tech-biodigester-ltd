@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "SolekTech engineers advanced biodigester sewage systems for homes, estates, hotels, schools, hospitals, commercial developments, and industry — sustainable wastewater treatment built to last.",
+          "SolekTech engineers advanced biodigester sewage systems for homes, estates, hotels, and industry — sustainable wastewater treatment built to last.",
       },
       { name: "author", content: "SolekTech" },
       { property: "og:title", content: "SolekTech — Advanced Biodigester Sewage Systems" },
