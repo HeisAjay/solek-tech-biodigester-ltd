@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://solek-tech-biodigester-ltd.lovable.app/sitemap.xml
