@@ -19,6 +19,26 @@ export const Route = createFileRoute("/contact")({
       },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "SolekTech",
+          url: "https://solek-tech-biodigester-ltd.lovable.app/contact",
+          image: "https://solek-tech-biodigester-ltd.lovable.app/favicon.png",
+          telephone: "+234 7066602480",
+          email: "Olaifasolomonadeleke2@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "No 52, Community Road, Ago Palace Way, Okota, Isolo",
+            addressLocality: "Lagos",
+            addressCountry: "NG",
+          },
+        }),
+      },
+    ],
   }),
   component: ContactPage,
 });

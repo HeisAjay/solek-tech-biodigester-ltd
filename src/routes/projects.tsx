@@ -21,6 +21,20 @@ export const Route = createFileRoute("/projects")({
       },
     ],
     links: [{ rel: "canonical", href: "/projects" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Featured SolekTech Projects",
+          url: "https://solek-tech-biodigester-ltd.lovable.app/projects",
+          description:
+            "Featured biodigester installations across residential estates, hospitality, institutions, and industry.",
+          isPartOf: { "@id": "https://solek-tech-biodigester-ltd.lovable.app/#website" },
+        }),
+      },
+    ],
   }),
   component: ProjectsPage,
 });

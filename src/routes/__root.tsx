@@ -106,6 +106,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://solek-tech-biodigester-ltd.lovable.app/#organization",
+              name: "SolekTech",
+              url: "https://solek-tech-biodigester-ltd.lovable.app",
+              logo: "https://solek-tech-biodigester-ltd.lovable.app/favicon.png",
+              email: "Olaifasolomonadeleke2@gmail.com",
+              telephone: "+234 7066602480",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "No 52, Community Road, Ago Palace Way, Okota, Isolo",
+                addressLocality: "Lagos",
+                addressCountry: "NG",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://solek-tech-biodigester-ltd.lovable.app/#website",
+              name: "SolekTech",
+              url: "https://solek-tech-biodigester-ltd.lovable.app",
+              publisher: { "@id": "https://solek-tech-biodigester-ltd.lovable.app/#organization" },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
