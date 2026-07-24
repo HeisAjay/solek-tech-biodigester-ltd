@@ -111,20 +111,24 @@ function ContactPage() {
             <p className="mt-2 text-sm text-muted-foreground">We reply within one business day.</p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <Field label="Full name" name="name" placeholder="Jane Doe" required />
+              <Field id="contact-name" label="Full name" name="name" placeholder="Jane Doe" required />
               <Field
+                id="contact-email"
                 label="Email"
                 name="email"
                 type="email"
                 placeholder="jane@company.com"
                 required
               />
-              <Field label="Phone" name="phone" placeholder="+234 7066602480" />
-              <Field label="Property type" name="type" placeholder="Home, estate, hotel, school…" />
+              <Field id="contact-phone" label="Phone" name="phone" placeholder="+234 7066602480" />
+              <Field id="contact-type" label="Property type" name="type" placeholder="Home, estate, hotel, school…" />
             </div>
             <div className="mt-4">
-              <label className="text-sm font-medium text-foreground">Tell us about your site</label>
+              <label htmlFor="contact-message" className="text-sm font-medium text-foreground">
+                Tell us about your site
+              </label>
               <textarea
+                id="contact-message"
                 name="message"
                 rows={5}
                 placeholder="Approximate users, existing drainage, timeline, location…"
@@ -147,12 +151,14 @@ function ContactPage() {
 }
 
 function Field({
+  id,
   label,
   name,
   type = "text",
   placeholder,
   required,
 }: {
+  id: string;
   label: string;
   name: string;
   type?: string;
@@ -161,11 +167,12 @@ function Field({
 }) {
   return (
     <div>
-      <label className="text-sm font-medium text-foreground">
+      <label htmlFor={id} className="text-sm font-medium text-foreground">
         {label}
         {required && <span className="text-primary"> *</span>}
       </label>
       <input
+        id={id}
         name={name}
         type={type}
         required={required}

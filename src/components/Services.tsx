@@ -81,8 +81,8 @@ function ServiceCard({
         <h3 className="mt-6 font-display text-xl font-semibold text-foreground">{title}</h3>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
         <div className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary">
-          Learn more
-          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          View service details
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
         </div>
       </div>
     </div>
