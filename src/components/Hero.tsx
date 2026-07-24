@@ -11,6 +11,9 @@ export function Hero() {
         alt="Aerial view of a modern biodigester wastewater installation at a residential estate at golden hour"
         width={1920}
         height={1280}
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#04121a]/70 via-[#04121a]/55 to-[#04121a]/85" />

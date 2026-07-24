@@ -1,0 +1,15 @@
+# SolekTech
+
+> SolekTech engineers advanced biodigester sewage and wastewater treatment systems for homes, estates, hotels, institutions, and industry in Lagos, Nigeria.
+
+SolekTech designs, installs, and maintains sealed underground biodigester systems that use natural anaerobic digestion to treat sewage — no odor, no chemicals, minimal maintenance, and full environmental compliance.
+
+## Pages
+
+- [Home](/): Overview of SolekTech's biodigester wastewater solutions, services, and results.
+- [About](/about): Who we are, our engineering approach, and our sustainability commitment.
+- [Services](/services): Biodigester design, installation, retrofits, maintenance, and compliance support.
+- [Projects](/projects): Featured installations across estates, hospitality, institutions, and industry.
+- [Process](/process): How a project runs, from site assessment to commissioning.
+- [FAQ](/faq): Common questions on installation time, maintenance, space, compliance, and retrofits.
+- [Contact](/contact): Request a free site assessment. Email Olaifasolomonadeleke2@gmail.com or call +234 7066602480.
