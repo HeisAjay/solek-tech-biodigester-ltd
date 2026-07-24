@@ -151,12 +151,14 @@ function ContactPage() {
 }
 
 function Field({
+  id,
   label,
   name,
   type = "text",
   placeholder,
   required,
 }: {
+  id: string;
   label: string;
   name: string;
   type?: string;
@@ -165,11 +167,12 @@ function Field({
 }) {
   return (
     <div>
-      <label className="text-sm font-medium text-foreground">
+      <label htmlFor={id} className="text-sm font-medium text-foreground">
         {label}
         {required && <span className="text-primary"> *</span>}
       </label>
       <input
+        id={id}
         name={name}
         type={type}
         required={required}
