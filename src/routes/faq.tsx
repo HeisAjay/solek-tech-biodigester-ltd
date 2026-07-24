@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FaqSection } from "@/components/FaqSection";
+import { FaqSection, faqs } from "@/components/FaqSection";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHeader } from "@/components/PageHeader";
 
@@ -19,6 +19,20 @@ export const Route = createFileRoute("/faq")({
       },
     ],
     links: [{ rel: "canonical", href: "/faq" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+    ],
   }),
   component: FaqPage,
 });

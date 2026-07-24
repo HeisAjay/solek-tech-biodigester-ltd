@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqs = [
+export const faqs = [
   {
     q: "What exactly is a biodigester system?",
     a: "A biodigester uses natural anaerobic bacteria to break down organic waste in a sealed underground chamber. The output is clean effluent and small amounts of biogas — with no odor, no chemicals, and no active mechanical parts inside the tank.",
