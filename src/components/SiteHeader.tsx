@@ -1,16 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import logoAsset from "@/assets/solektech-logo.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
+  { to: "/about", label: "About Us" },
   { to: "/services", label: "Services" },
   { to: "/projects", label: "Projects" },
-  { to: "/process", label: "Process" },
-  { to: "/faq", label: "FAQ" },
+  { to: "/process", label: "How It Works" },
+  { to: "/contact", label: "Contact Us" },
 ] as const;
+
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
