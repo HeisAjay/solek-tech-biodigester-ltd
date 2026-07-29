@@ -105,7 +105,8 @@ export function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className="mt-2 block text-center rounded-xl gradient-emerald px-4 py-3 text-sm font-semibold text-white"
               >
-                Contact
+                Get a Free Assessment
+
               </Link>
             </div>
           </div>
