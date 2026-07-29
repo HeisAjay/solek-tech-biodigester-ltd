@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section className="relative isolate min-h-[100svh] w-full overflow-hidden">
       <img
-        src={heroImg}
+        src={heroImg.url}
         alt="SolekTech engineers installing an underground biodigester sewage system on a building site"
         width={1920}
         height={1280}
