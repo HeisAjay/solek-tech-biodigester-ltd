@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ClipboardCheck, PlayCircle, Leaf, Waves, Cog, ShieldCheck, HardHat } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/hero.jpg.asset.json";
 
 const features = [
   { icon: Leaf, title: "Eco-Friendly", sub: "Technology" },
