@@ -68,10 +68,12 @@ export function SiteHeader() {
             ))}
             <Link
               to="/contact"
-              className="ml-2 inline-flex items-center gap-2 rounded-full gradient-emerald px-5 py-2.5 text-sm font-semibold text-white shadow-elegant hover:opacity-95 transition"
+              className="ml-3 inline-flex items-center gap-2 rounded-xl gradient-emerald px-5 py-2.5 text-sm font-semibold text-white shadow-elegant hover:opacity-95 transition"
             >
-              Contact
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              Get a Free Assessment
             </Link>
+
           </nav>
 
           <button
