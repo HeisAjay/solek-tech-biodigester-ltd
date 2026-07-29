@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ClipboardCheck, PlayCircle, Leaf, Waves, Cog, ShieldCheck, HardHat } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/hero.jpg.asset.json";
 
 const features = [
   { icon: Leaf, title: "Eco-Friendly", sub: "Technology" },
@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section className="relative isolate min-h-[100svh] w-full overflow-hidden">
       <img
-        src={heroImg}
+        src={heroImg.url}
         alt="SolekTech engineers installing an underground biodigester sewage system on a building site"
         width={1920}
         height={1280}
