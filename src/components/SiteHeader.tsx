@@ -1,16 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import logoAsset from "@/assets/solektech-logo.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
+  { to: "/about", label: "About Us" },
   { to: "/services", label: "Services" },
   { to: "/projects", label: "Projects" },
-  { to: "/process", label: "Process" },
-  { to: "/faq", label: "FAQ" },
+  { to: "/process", label: "How It Works" },
+  { to: "/contact", label: "Contact Us" },
 ] as const;
+
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -67,10 +68,12 @@ export function SiteHeader() {
             ))}
             <Link
               to="/contact"
-              className="ml-2 inline-flex items-center gap-2 rounded-full gradient-emerald px-5 py-2.5 text-sm font-semibold text-white shadow-elegant hover:opacity-95 transition"
+              className="ml-3 inline-flex items-center gap-2 rounded-xl gradient-emerald px-5 py-2.5 text-sm font-semibold text-white shadow-elegant hover:opacity-95 transition"
             >
-              Contact
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              Get a Free Assessment
             </Link>
+
           </nav>
 
           <button
@@ -102,7 +105,8 @@ export function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className="mt-2 block text-center rounded-xl gradient-emerald px-4 py-3 text-sm font-semibold text-white"
               >
-                Contact
+                Get a Free Assessment
+
               </Link>
             </div>
           </div>
