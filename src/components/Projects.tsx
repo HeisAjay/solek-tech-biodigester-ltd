@@ -1,39 +1,67 @@
+import type { ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
 import { SectionHeader } from "./SectionHeader";
 import { useReveal } from "@/hooks/use-reveal";
-import { ArrowUpRight } from "lucide-react";
-import estateImg from "@/assets/project-estate.jpg";
-import schoolImg from "@/assets/project-school.jpg";
-import industrialImg from "@/assets/project-industrial.jpg";
-import hotelImg from "@/assets/project-hotel.jpg";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+import siteWorkImg from "@/assets/project-biodigester-site-prep.jpg";
+import websiteShot from "@/assets/project-website-screenshot.jpg";
 
-const projects = [
+type Project = {
+  category: string;
+  title: string;
+  description: string;
+  status: string;
+  link: string;
+  buttonLabel: string;
+  render: () => ReactNode;
+};
+
+const projects: Project[] = [
   {
-    img: estateImg,
-    tag: "Residential Estate",
-    title: "Palmview Heights — 84 homes",
-    excerpt:
-      "A fully underground biodigester network serving an 84-home luxury estate with zero surface footprint.",
+    category: "Site Work & Installation Preparation",
+    title: "SolekTech Biodigester Installation",
+    description:
+      "On-site preparation for an advanced biodigester sewage system. This project highlights the groundwork involved in preparing a site for wastewater infrastructure.",
+    status: "Site preparation documented; final installation completion not confirmed.",
+    link: "https://solektech-tnz2k29.public.builtwithrocket.new/",
+    buttonLabel: "View Project",
+    render: () => (
+      <img
+        src={siteWorkImg}
+        alt="Two workers in reflective safety vests preparing a site for a biodigester installation"
+        loading="lazy"
+        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+    ),
   },
   {
-    img: industrialImg,
-    tag: "Industrial",
-    title: "Northline Processing Plant",
-    excerpt:
-      "High-capacity anaerobic treatment cutting effluent COD by 92% and reclaiming biogas for on-site heat.",
-  },
-  {
-    img: schoolImg,
-    tag: "Institutional",
-    title: "Greenfield Academy Campus",
-    excerpt:
-      "A silent, odor-free system serving 2,400 students and staff — with dashboard-based monitoring.",
-  },
-  {
-    img: hotelImg,
-    tag: "Hospitality",
-    title: "Bayline Resort & Spa",
-    excerpt:
-      "Discreet treatment integrated into landscaped grounds — preserving guest experience end-to-end.",
+    category: "Website Design & Digital Presence",
+    title: "So'lekTech Solutions Website",
+    description:
+      "A company website presenting SolekTech's biodigester technology and services, with a clear pathway for prospective customers to request consultations.",
+    status: "Published website.",
+    link: "https://solek-tech-biodigester-ltd.lovable.app/",
+    buttonLabel: "Visit Website",
+    render: () => (
+      <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-secondary to-muted p-4 md:p-6">
+        <div className="w-full max-w-md overflow-hidden rounded-lg border border-border bg-background shadow-elegant transition-transform duration-700 group-hover:scale-105">
+          <div className="flex items-center gap-1.5 border-b border-border bg-secondary px-3 py-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-destructive/50" />
+            <span className="h-2.5 w-2.5 rounded-full bg-chart-4/60" />
+            <span className="h-2.5 w-2.5 rounded-full bg-emerald/60" />
+            <span className="ml-2 flex-1 truncate rounded border border-border bg-background px-2 py-0.5 text-[10px] text-muted-foreground">
+              solek-tech-biodigester-ltd.lovable.app
+            </span>
+          </div>
+          <img
+            src={websiteShot}
+            alt="Screenshot of the SolekTech Solutions website homepage"
+            loading="lazy"
+            className="block h-auto w-full"
+          />
+        </div>
+      </div>
+    ),
   },
 ];
 
@@ -42,62 +70,88 @@ export function Projects() {
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHeader
-          eyebrow="Featured Projects"
-          title="Recent work, quietly running."
-          description="A sample of installations across sectors — designed for performance you don't have to think about."
+          eyebrow="OUR WORK"
+          title="Engineering Solutions in Action"
+          description="Explore SolekTech's engineering work and digital presence, bringing sustainable wastewater solutions and practical project information to customers."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-14 grid gap-6 md:gap-8 md:grid-cols-2">
           {projects.map((p, i) => (
             <ProjectCard key={p.title} {...p} index={i} />
           ))}
         </div>
+
+        <FinalCta />
       </div>
     </section>
   );
 }
 
 function ProjectCard({
-  img,
-  tag,
+  category,
   title,
-  excerpt,
+  description,
+  status,
+  link,
+  buttonLabel,
+  render,
   index,
-}: {
-  img: string;
-  tag: string;
-  title: string;
-  excerpt: string;
-  index: number;
-}) {
-  const ref = useReveal<HTMLAnchorElement>();
+}: Project & { index: number }) {
+  const ref = useReveal<HTMLDivElement>();
   return (
-    <a
+    <div
       ref={ref}
-      href="#"
       style={{ transitionDelay: `${index * 80}ms` }}
-      className="reveal group relative block overflow-hidden rounded-3xl bg-card shadow-soft hover:shadow-elegant transition-shadow"
+      className="reveal group overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-shadow duration-300 hover:shadow-elegant"
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
-        <img
-          src={img}
-          alt={title}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#04121a]/80 via-[#04121a]/10 to-transparent" />
-        <span className="absolute top-5 left-5 inline-flex items-center rounded-full glass px-3 py-1 text-xs font-medium text-white">
-          {tag}
+      <div className="relative aspect-[4/3] overflow-hidden bg-muted">{render()}</div>
+      <div className="p-6 md:p-8">
+        <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+          {category}
         </span>
-        <div className="absolute inset-x-6 bottom-6 text-white">
-          <h3 className="font-display text-xl md:text-2xl font-semibold tracking-tight">{title}</h3>
-          <p className="mt-2 text-sm text-white/80 max-w-md">{excerpt}</p>
-          <div className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-brand">
-            View case study
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </div>
-        </div>
+        <h3 className="mt-4 font-display text-xl md:text-2xl font-semibold tracking-tight text-foreground">
+          {title}
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+          {description}
+        </p>
+        <p className="mt-4 text-xs italic text-muted-foreground/80">{status}</p>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${buttonLabel}: ${title} (opens in a new tab)`}
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          {buttonLabel}
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </a>
       </div>
-    </a>
+    </div>
+  );
+}
+
+function FinalCta() {
+  const ref = useReveal<HTMLDivElement>();
+  return (
+    <div
+      ref={ref}
+      className="reveal mt-16 rounded-2xl border border-border bg-gradient-to-br from-primary/5 to-secondary p-8 text-center md:p-10"
+    >
+      <h3 className="font-display text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+        Planning a Wastewater Project?
+      </h3>
+      <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
+        Tell us about your site and requirements, and we'll help you figure out the right
+        approach.
+      </p>
+      <Link
+        to="/contact"
+        className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      >
+        Request a Consultation
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+      </Link>
+    </div>
   );
 }
